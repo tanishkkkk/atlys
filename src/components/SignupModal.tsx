@@ -19,11 +19,16 @@ const SignupModal = ({ isModalOpen, closeModal }: Props) => {
       onClick={closeModal}
     >
       {/* Modal */}
-
       <div
-        className="border-2 w-[463px] border-[#525458] rounded-lg flex items-center flex-col p-6 bg-[#27292D]"
+        className="border-2 w-[463px] relative border-[#525458] rounded-lg flex items-center flex-col p-6 bg-[#27292D]"
         onClick={(e) => e.stopPropagation()}
       >
+        <button
+          className="bg-[#000000] p-[7px] rounded-full absolute right-3 top-3"
+          onClick={closeModal}
+        >
+          <img src="/images/Cross.png" alt="cross-icon" />
+        </button>
         <h4 className="text-[#6B6C70] text-sm font-medium mt-4">SIGN UP</h4>
         <p className="text-white font-semibold mb-11">
           Create an account to continue
@@ -41,7 +46,7 @@ const SignupModal = ({ isModalOpen, closeModal }: Props) => {
           label="Username"
           changeHandler={(e) => console.log(e)}
           type="text"
-          id="password"
+          id="username"
         />
         <InputField
           placeholder="Choose a strong password"
