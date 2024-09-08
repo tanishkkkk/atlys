@@ -13,7 +13,10 @@ const CreatePost = () => {
         />
       </div>
       <div className="w-[20%] ml-auto">
-        <ActionButton text="Post" />
+        <ActionButton
+          text="Post"
+          clickHandler={() => console.log("click me")}
+        />
       </div>
     </div>
   );

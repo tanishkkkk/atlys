@@ -1,6 +1,6 @@
-import React from "react";
 import CreatePost from "../components/CreatePost";
 import Post from "../components/Post";
+import { POST_LIST } from "../constant";
 
 const Home = () => {
   return (
@@ -12,7 +12,9 @@ const Home = () => {
           community 🤗
         </p>
         <CreatePost />
-        <Post />
+        {POST_LIST.map((post) => (
+          <Post key={post.id} post={post} />
+        ))}
       </div>
     </main>
   );
