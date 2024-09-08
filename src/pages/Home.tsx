@@ -1,5 +1,6 @@
 import React from "react";
 import CreatePost from "../components/CreatePost";
+import Post from "../components/Post";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
           community 🤗
         </p>
         <CreatePost />
+        <Post />
       </div>
     </main>
   );
