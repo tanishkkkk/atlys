@@ -1,7 +1,10 @@
 import InputField from "../components/InputField";
 import ActionButton from "../components/ActionButton";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <main className="flex justify-center flex-col items-center h-[100vh]">
       <img
@@ -31,10 +34,7 @@ const Login = () => {
           type="text"
           id="password"
         />
-        <ActionButton
-          text="Login now"
-          clickHandler={() => console.log("click me")}
-        />
+        <ActionButton text="Login now" clickHandler={() => navigate("/home")} />
         <p className="w-full text-[#6B6C70]">
           Not registered yet? <span className="text-[#C5C7CA]">Register →</span>
         </p>
