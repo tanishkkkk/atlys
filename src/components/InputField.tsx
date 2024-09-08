@@ -21,7 +21,7 @@ const InputField = ({
         {label}
       </label>
       <input
-        className="bg-transparent border p-3 rounded border-[#35373B] placeholder:text-[#7F8084]"
+        className="bg-transparent border p-3 rounded border-[#35373B] placeholder:text-[#7F8084] focus-visible:outline-none"
         id={id}
         type={type}
         placeholder={placeholder}
