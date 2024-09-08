@@ -2,7 +2,7 @@ import { useState } from "react";
 import CreatePost from "../components/CreatePost";
 import Post from "../components/Post";
 import { POST_LIST } from "../constant";
-import SignupModal from "../components/SignupModal";
+import AuthModal from "../components/AuthModal";
 
 const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,7 +25,7 @@ const Home = () => {
         ))}
       </div>
       {isModalOpen && (
-        <SignupModal isModalOpen={isModalOpen} closeModal={closeModal} />
+        <AuthModal isModalOpen={isModalOpen} closeModal={closeModal} />
       )}
     </main>
   );
