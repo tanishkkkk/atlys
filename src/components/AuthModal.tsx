@@ -1,17 +1,16 @@
-import React from "react";
+import { useState } from "react";
 import InputField from "./InputField";
 import ActionButton from "./ActionButton";
-import { useNavigate } from "react-router-dom";
-import { SIGNUP_FIELDS } from "../constant";
+import { LOGIN_FIELDS, SIGNUP_FIELDS } from "../constant";
 
 interface Props {
   isModalOpen: boolean;
   closeModal: () => void;
 }
 
-const SignupModal = ({ isModalOpen, closeModal }: Props) => {
-  const navigate = useNavigate();
-
+const AuthModal = ({ isModalOpen, closeModal }: Props) => {
+  const [isLogin, setIsLogin] = useState(false);
+  console.log(isLogin);
   return (
     <div
       className={`fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center transition-all duration-1000 ${
@@ -30,12 +29,13 @@ const SignupModal = ({ isModalOpen, closeModal }: Props) => {
         >
           <img src="/images/Cross.png" alt="cross-icon" />
         </button>
-        <h4 className="text-[#6B6C70] text-sm font-medium mt-4">SIGN UP</h4>
+        <h4 className="text-[#6B6C70] text-sm font-medium mt-4">
+          {isLogin ? "WELCOME BACK" : "SIGN UP"}
+        </h4>
         <p className="text-white font-semibold mb-11">
-          Create an account to continue
+          {isLogin ? "Log into your account" : "Create an account to continue"}
         </p>
-
-        {SIGNUP_FIELDS.map((field) => (
+        {(isLogin ? LOGIN_FIELDS : SIGNUP_FIELDS).map((field) => (
           <InputField
             key={field.id}
             placeholder={field.placeholder}
@@ -45,13 +45,20 @@ const SignupModal = ({ isModalOpen, closeModal }: Props) => {
           />
         ))}
         <ActionButton text="Continue" clickHandler={closeModal} />
-        <p className="w-full text-[#6B6C70]">
-          Already have an account?
-          <span className="text-[#C5C7CA]"> Login →</span>
-        </p>
+        <div className="w-full flex gap-1 text-[#6B6C70]">
+          <p>
+            {isLogin ? "Not registered yet? " : "Already have an account? "}
+          </p>
+          <button
+            className="text-[#C5C7CA]"
+            onClick={() => setIsLogin((authVal) => !authVal)}
+          >
+            {isLogin ? "Register →" : "Login →"}
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default SignupModal;
+export default AuthModal;
