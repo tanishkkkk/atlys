@@ -1,6 +1,7 @@
 import InputField from "../components/InputField";
 import ActionButton from "../components/ActionButton";
 import { useNavigate } from "react-router-dom";
+import { LOGIN_FIELDS } from "../constant";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -19,21 +20,15 @@ const Login = () => {
           WELCOME BACK
         </h4>
         <p className="text-white font-semibold mb-11">Log into your account</p>
-
-        <InputField
-          placeholder="Enter your email or username"
-          label="Email or Username"
-          changeHandler={(e) => console.log(e)}
-          type="text"
-          id="name"
-        />
-        <InputField
-          placeholder="Enter your password"
-          label="Password"
-          changeHandler={(e) => console.log(e)}
-          type="text"
-          id="password"
-        />
+        {LOGIN_FIELDS.map((field) => (
+          <InputField
+            key={field.id}
+            placeholder={field.placeholder}
+            label={field.label}
+            changeHandler={field.handler}
+            id={field.id}
+          />
+        ))}
         <ActionButton text="Login now" clickHandler={() => navigate("/home")} />
         <p className="w-full text-[#6B6C70]">
           Not registered yet? <span className="text-[#C5C7CA]">Register →</span>

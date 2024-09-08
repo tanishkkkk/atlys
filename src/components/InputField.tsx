@@ -4,7 +4,6 @@ interface InputFieldProps {
   label: string;
   placeholder: string;
   changeHandler: (event: ChangeEvent<HTMLInputElement>) => void;
-  type: string;
   id: string;
 }
 
@@ -12,7 +11,6 @@ const InputField = ({
   label,
   placeholder,
   changeHandler,
-  type,
   id,
 }: InputFieldProps) => {
   return (
@@ -23,7 +21,6 @@ const InputField = ({
       <input
         className="bg-transparent border p-3 rounded border-[#35373B] placeholder:text-[#7F8084] focus-visible:outline-none"
         id={id}
-        type={type}
         placeholder={placeholder}
         onChange={(e) => changeHandler(e)}
       />

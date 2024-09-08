@@ -2,6 +2,7 @@ import React from "react";
 import InputField from "./InputField";
 import ActionButton from "./ActionButton";
 import { useNavigate } from "react-router-dom";
+import { SIGNUP_FIELDS } from "../constant";
 
 interface Props {
   isModalOpen: boolean;
@@ -34,27 +35,15 @@ const SignupModal = ({ isModalOpen, closeModal }: Props) => {
           Create an account to continue
         </p>
 
-        <InputField
-          placeholder="Enter your email"
-          label="Email"
-          changeHandler={(e) => console.log(e)}
-          type="text"
-          id="name"
-        />
-        <InputField
-          placeholder="Choose a preferred username"
-          label="Username"
-          changeHandler={(e) => console.log(e)}
-          type="text"
-          id="username"
-        />
-        <InputField
-          placeholder="Choose a strong password"
-          label="Password"
-          changeHandler={(e) => console.log(e)}
-          type="text"
-          id="password"
-        />
+        {SIGNUP_FIELDS.map((field) => (
+          <InputField
+            key={field.id}
+            placeholder={field.placeholder}
+            label={field.label}
+            changeHandler={field.handler}
+            id={field.id}
+          />
+        ))}
         <ActionButton text="Continue" clickHandler={closeModal} />
         <p className="w-full text-[#6B6C70]">
           Already have an account?

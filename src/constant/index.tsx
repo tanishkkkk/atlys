@@ -1,3 +1,5 @@
+import { inputChangeHandler } from "../utils";
+
 export const POST_LIST = [
   {
     id: "23deh7j",
@@ -18,5 +20,46 @@ export const POST_LIST = [
     comments: 14,
     emoji: "😞",
     isEdited: true,
+  },
+];
+
+export const SIGNUP_FIELDS = [
+  {
+    placeholder: "Enter your email",
+    label: "Email",
+    handler: inputChangeHandler,
+    id: "email",
+    isPassword: false,
+  },
+  {
+    placeholder: "Choose a preferred username",
+    label: "Username",
+    handler: inputChangeHandler,
+    id: "username",
+    isPassword: false,
+  },
+  {
+    placeholder: "Choose a strong password",
+    label: "Password",
+    handler: inputChangeHandler,
+    id: "password",
+    isPassword: true,
+  },
+];
+
+export const LOGIN_FIELDS = [
+  {
+    placeholder: "Enter your email or username",
+    label: "Email or Username",
+    handler: inputChangeHandler,
+    id: "name",
+    isPassword: false,
+  },
+  {
+    placeholder: "Enter your password",
+    label: "Password",
+    handler: inputChangeHandler,
+    id: "password",
+    isPassword: true,
   },
 ];
