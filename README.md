@@ -1,4 +1,4 @@
-# Getting Started with Social connect (Atlys assigment)
+# Getting Started with [Social Connect](https://atlys-theta.vercel.app/login) (Atlys assigment)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
