@@ -1,10 +1,25 @@
-# Getting Started with Create React App
+# Getting Started with Social connect (Atlys assigment)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Features
+1. Login Page
+2. Home Page
+3. Auth Modal (will get open the user will click in the container as described in figma)
+4. Transition effect in the auth modal
+5. Toggle password/text type on input element
+6. 404 Page
 
-In the project directory, you can run:
+## Note
+1. Auth flow or any login credentials is not required, the user can click on `Login now` to redirect himself/herself to the home page.
+2. API integration is not used for listing posts on the home page as it was mentioned, created a dummy response in a constant file.
+   
+## Tech Stack  
+1. React ^18.3.1
+2. React-rounter-dom
+3. Typescript
+4. TailwindCSS
+5. lucide-react (for icons) 
 
 ### `npm start`
 
@@ -26,21 +41,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
