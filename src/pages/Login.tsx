@@ -27,6 +27,7 @@ const Login = () => {
             label={field.label}
             changeHandler={field.handler}
             id={field.id}
+            isPassword={field.isPassword}
           />
         ))}
         <ActionButton text="Login now" clickHandler={() => navigate("/home")} />
