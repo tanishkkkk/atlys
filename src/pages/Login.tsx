@@ -9,7 +9,7 @@ const Login = () => {
   return (
     <main className="flex justify-center flex-col items-center h-[100vh]">
       <img
-        src="/logo.png"
+        src="/images/Logo.png"
         alt="Logo"
         style={{ width: "40px", height: "40px" }}
         className="mb-8"
