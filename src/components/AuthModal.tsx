@@ -67,10 +67,7 @@ const AuthModal = ({ isModalOpen, closeModal }: Props) => {
           <p>
             {isLogin ? "Not registered yet? " : "Already have an account? "}
           </p>
-          <button
-            className="text-[#C5C7CA]"
-            onClick={() => setIsLogin((authVal) => !authVal)}
-          >
+          <button onClick={() => setIsLogin((authVal) => !authVal)}>
             {isLogin ? "Register →" : "Login →"}
           </button>
         </div>

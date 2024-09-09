@@ -25,7 +25,7 @@ const InputField = ({
   return (
     <div className="flex flex-col w-full gap-2 m-2">
       <div className="flex justify-between">
-        <label htmlFor={id} className="text-sm font-medium text-[#C5C7CA]">
+        <label htmlFor={id} className="text-sm font-medium">
           {label}
         </label>
         {id === "password" && (
